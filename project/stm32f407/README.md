@@ -2,47 +2,79 @@
 
 #### 1.1 Chip Info
 
-chip name : STM32F407ZGT6.
+Chip Name: STM32F407ZGT6.
 
-extern oscillator : 8MHz.
+Extern Oscillator: 8MHz.
 
-uart pin: TX/RX PA9/PA10.
+UART Pin: TX/RX PA9/PA10.
 
-iic pin: SCL/SDA PB8/PB9.
+IIC Pin: SCL/SDA PB8/PB9.
 
-### 2. Shell
+### 2. Development and Debugging
 
-#### 2.1 Shell Parameter
+#### 2.1 Integrated Development Environment
 
-baud rate: 115200.
+LidDriver provides both Keil and IAR integrated development environment projects.
 
-data bits : 8.
+MDK is the Keil ARM project and your Keil version must be 5 or higher.Keil ARM project needs STMicroelectronics STM32F4 Series Device Family Pack and you can download from https://www.keil.com/dd2/stmicroelectronics/stm32f407zgtx.
 
-stop bits: 1.
+EW is the IAR ARM project and your IAR version must be 9 or higher.
 
-parity: none.
+#### 2.2 Serial Port Parameter
 
-flow control: none.
+Baud Rate: 115200.
+
+Data Bits : 8.
+
+Stop Bits: 1.
+
+Parity: None.
+
+Flow Control: None.
+
+#### 2.3 Serial Port Assistant
+
+We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g. the displayed content does not divide lines), please modify the configuration of your serial port assistant or replace one that supports '\n' parsing.
 
 ### 3. HTU21D
 
 #### 3.1 Command Instruction
 
-​           htu21d is a basic command which can test all htu21d driver function:
+1. Show htu21d chip and driver information.
 
-​           -i        show htu21d chip and driver information.
+   ```shell
+   htu21d (-i | --information)
+   ```
 
-​           -h       show htu21d help.
+2. Show htu21d help.
 
-​           -p       show htu21d pin connections of the current board.
+   ```shell
+   htu21d (-h | --help)
+   ```
 
-​           -t (reg | read <times>)
+3. Show htu21d pin connections of the current board.
 
-​           -t reg        run htu21d register test.
+   ```shell
+   htu21d (-p | --port)
+   ```
 
-​           -t read <times>       run htu21d read test. times is test times.
+4. Run htu21d register test.
 
-​           -c read <times>      run htu21d read function. times is read times.
+   ```shell
+   htu21d (-t reg | --test=reg)
+   ```
+
+5. Run htu21d read test, num is test times.
+
+   ```shell
+   htu21d (-t read | --test=read) [--times=<num>]
+   ```
+
+6. Run htu21d read function, num is read times.
+
+   ```shell
+   htu21d (-e read | --example=read) [--times=<num>]
+   ```
 
 #### 3.2 Command Example
 
@@ -113,7 +145,7 @@ htu21d: finish register test.
 ```
 
 ```shell
-htu21d -t read 3
+htu21d -t read --times=3
 
 htu21d: chip is TE HTU21D.
 htu21d: manufacturer is TE.
@@ -125,79 +157,76 @@ htu21d: max current is 0.50mA.
 htu21d: max temperature is 125.0C.
 htu21d: min temperature is -40.0C.
 htu21d: start read test.
-htu21d: set hold master mode.
-htu21d: temperature is 28.41C.
-htu21d: humidity is 35.05%.
-htu21d: temperature is 29.18C.
-htu21d: humidity is 33.70%.
-htu21d: temperature is 29.37C.
-htu21d: humidity is 33.04%.
 htu21d: set no hold master mode.
-htu21d: temperature is 29.49C.
-htu21d: humidity is 32.78%.
-htu21d: temperature is 29.61C.
-htu21d: humidity is 32.47%.
-htu21d: temperature is 29.66C.
-htu21d: humidity is 32.20%.
-htu21d: set resolution temp 11 bits and rh 11 bits.
+htu21d: temperature is 28.91C.
+htu21d: humidity is 25.55%.
 htu21d: temperature is 29.71C.
-htu21d: humidity is 32.04%.
-htu21d: temperature is 29.78C.
-htu21d: humidity is 31.88%.
-htu21d: temperature is 29.82C.
-htu21d: humidity is 31.78%.
-htu21d: set resolution temp 12 bits and rh 8 bits.
+htu21d: humidity is 23.42%.
 htu21d: temperature is 29.88C.
-htu21d: humidity is 31.78%.
-htu21d: temperature is 29.93C.
-htu21d: humidity is 31.74%.
-htu21d: temperature is 29.95C.
-htu21d: humidity is 31.63%.
-htu21d: set resolution temp 13 bits and rh 10 bits.
-htu21d: temperature is 30.01C.
-htu21d: humidity is 31.58%.
-htu21d: temperature is 30.06C.
-htu21d: humidity is 31.59%.
+htu21d: humidity is 22.22%.
+htu21d: set resolution temp 11 bits and rh 11 bits.
+htu21d: temperature is 29.98C.
+htu21d: humidity is 21.71%.
+htu21d: temperature is 29.98C.
+htu21d: humidity is 20.55%.
 htu21d: temperature is 30.08C.
-htu21d: humidity is 31.51%.
+htu21d: humidity is 21.36%.
+htu21d: set resolution temp 12 bits and rh 8 bits.
+htu21d: temperature is 30.16C.
+htu21d: humidity is 20.28%.
+htu21d: temperature is 30.20C.
+htu21d: humidity is 19.71%.
+htu21d: temperature is 30.25C.
+htu21d: humidity is 18.98%.
+htu21d: set resolution temp 13 bits and rh 10 bits.
+htu21d: temperature is 30.27C.
+htu21d: humidity is 18.59%.
+htu21d: temperature is 30.31C.
+htu21d: humidity is 20.58%.
+htu21d: temperature is 30.35C.
+htu21d: humidity is 24.57%.
 htu21d: set resolution temp 14 bits and rh 12 bits.
-htu21d: temperature is 30.12C.
-htu21d: humidity is 31.43%.
-htu21d: temperature is 30.13C.
-htu21d: humidity is 31.27%.
-htu21d: temperature is 30.17C.
-htu21d: humidity is 31.11%.
+htu21d: temperature is 30.37C.
+htu21d: humidity is 22.48%.
+htu21d: temperature is 30.41C.
+htu21d: humidity is 20.26%.
+htu21d: temperature is 30.42C.
+htu21d: humidity is 19.04%.
 htu21d: finish read test.
 ```
 
 ```shell
-htu21d -c read 3
+htu21d -e read --times=3
 
 htu21d: 1/3.
-htu21d: temperature is 29.17C.
-htu21d: humidity is 33.98%.
+htu21d: temperature is 29.56C.
+htu21d: humidity is 24.20%.
 htu21d: 2/3.
-htu21d: temperature is 29.35C.
-htu21d: humidity is 33.46%.
+htu21d: temperature is 29.76C.
+htu21d: humidity is 23.61%.
 htu21d: 3/3.
-htu21d: temperature is 29.46C.
-htu21d: humidity is 33.10%.
+htu21d: temperature is 29.87C.
+htu21d: humidity is 22.41%.
 ```
 
 ```shell
 htu21d -h
 
-htu21d -i
-	show htu21d chip and driver information.
-htu21d -h
-	show htu21d help.
-htu21d -p
-	show htu21d pin connections of the current board.
-htu21d -t reg
-	run htu21d register test.
-htu21d -t read <times>
-	run htu21d read test.times is test times.
-htu21d -c read <times>
-	run htu21d read function.times is read times.
+Usage:
+  htu21d (-i | --information)
+  htu21d (-h | --help)
+  htu21d (-p | --port)
+  htu21d (-t reg | --test=reg)
+  htu21d (-t read | --test=read) [--times=<num>]
+  htu21d (-e read | --example=read) [--times=<num>]
+
+Options:
+  -e <read>, --example=<read>    Run the driver example.
+  -h, --help                     Show the help.
+  -i, --information              Show the chip information.
+  -p, --port                     Display the pin connections of the current board.
+  -t <reg | read>, --test=<reg | read>
+                                 Run the driver test.
+      --times=<num>              Set the running times.([default: 3])
 ```
 
