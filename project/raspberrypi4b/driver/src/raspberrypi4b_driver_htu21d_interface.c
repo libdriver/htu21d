@@ -157,7 +157,7 @@ uint8_t htu21d_interface_iic_read_with_scl(uint8_t addr, uint8_t reg, uint8_t *b
  */
 void htu21d_interface_delay_ms(uint32_t ms)
 {
-    usleep(2000 * ms);
+    usleep(1000 * ms);
 }
 
 /**
