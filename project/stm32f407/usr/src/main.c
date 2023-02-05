@@ -75,7 +75,7 @@ uint8_t htu21d(uint8_t argc, char **argv)
         {"times", required_argument, NULL, 1},
         {NULL, 0, NULL, 0},
     };
-    char type[33] = "unknow";
+    char type[33] = "unknown";
     uint32_t times = 3;
     
     /* if no params */
@@ -306,7 +306,7 @@ int main(void)
     /* uart init */
     uart_init(115200);
 
-    /* shell init && register htu21d fuction */
+    /* shell init && register htu21d function */
     shell_init();
     shell_register("htu21d", htu21d);
     uart_print("htu21d: welcome to libdriver htu21d.\n");
@@ -329,7 +329,7 @@ int main(void)
             }
             else if (res == 2)
             {
-                uart_print("htu21d: unknow command.\n");
+                uart_print("htu21d: unknown command.\n");
             }
             else if (res == 3)
             {
@@ -345,7 +345,7 @@ int main(void)
             }
             else
             {
-                uart_print("htu21d: unknow status code.\n");
+                uart_print("htu21d: unknown status code.\n");
             }
             uart_flush();
         }
