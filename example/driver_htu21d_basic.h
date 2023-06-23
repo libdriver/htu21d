@@ -55,7 +55,7 @@ extern "C"{
  */
 #define HTU21D_BASIC_DEFAULT_MODE              HUT21D_MODE_NO_HOLD_MASTER                       /**< no hold master mode */
 #define HTU21D_BASIC_DEFAULT_RESOLUTION        HTU21D_RESOLUTION_TEMP_14_BITS_RH_12_BITS        /**< temp 14 bits and rh 12 bits */
-#define HTU21D_BASIC_DEFAULT_HEATER            HUT21D_BOOL_TRUE                                 /**< enable heater */
+#define HTU21D_BASIC_DEFAULT_HEATER            HTU21D_BOOL_FALSE                                /**< disable heater */
 #define HTU21D_BASIC_DEFAULT_OTP_RELOAD        HTU21D_BOOL_FALSE                                /**< enable otp reload */
 
 /**
