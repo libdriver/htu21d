@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver HTU21D
- * @brief     libdriver htu21d is a full function driver of htu21d and it can run in both MCU and Linux platform.
+ * @brief     LibDriver HTU21D is a full function driver of HTU21D and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
