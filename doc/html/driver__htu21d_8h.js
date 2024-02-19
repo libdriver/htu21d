@@ -14,11 +14,11 @@ var driver__htu21d_8h =
     [ "htu21d_info_t", "group__htu21d__base__driver.html#gac1869c95fc80a0ee4d3d91d461bfd02f", null ],
     [ "htu21d_bool_t", "group__htu21d__base__driver.html#gaeb86855a36eeb5076b9f3f0afcc7a4c0", [
       [ "HTU21D_BOOL_FALSE", "group__htu21d__base__driver.html#ggaeb86855a36eeb5076b9f3f0afcc7a4c0a2e53bd798be760f7ca887f749f3e1ed3", null ],
-      [ "HUT21D_BOOL_TRUE", "group__htu21d__base__driver.html#ggaeb86855a36eeb5076b9f3f0afcc7a4c0a5b8f72dda7fa09b644cec4a986cdfe4d", null ]
+      [ "HTU21D_BOOL_TRUE", "group__htu21d__base__driver.html#ggaeb86855a36eeb5076b9f3f0afcc7a4c0acea2597e8de24281cb97e15bc387a00b", null ]
     ] ],
     [ "htu21d_mode_t", "group__htu21d__base__driver.html#ga8d45849af894d726346f7f4b0285882b", [
       [ "HTU21D_MODE_HOLD_MASTER", "group__htu21d__base__driver.html#gga8d45849af894d726346f7f4b0285882ba1ef89fb302aebc5d1bc4ae77b9930482", null ],
-      [ "HUT21D_MODE_NO_HOLD_MASTER", "group__htu21d__base__driver.html#gga8d45849af894d726346f7f4b0285882ba87dad60862d177a8f5c186533126a268", null ]
+      [ "HTU21D_MODE_NO_HOLD_MASTER", "group__htu21d__base__driver.html#gga8d45849af894d726346f7f4b0285882bab9f0e1d3a14981ba2f577840be098de7", null ]
     ] ],
     [ "htu21d_resolution_t", "group__htu21d__base__driver.html#ga7324bd4db20abc8cebf8d069462def8a", [
       [ "HTU21D_RESOLUTION_TEMP_11_BITS_RH_11_BITS", "group__htu21d__base__driver.html#gga7324bd4db20abc8cebf8d069462def8aaf893c62ca9f5fc74873f8d900e96b2b0", null ],
@@ -28,7 +28,7 @@ var driver__htu21d_8h =
     ] ],
     [ "htu21d_status_t", "group__htu21d__base__driver.html#gae298be07e1cbe586e8ff27ee812a6f84", [
       [ "HTU21D_STATUS_OVER_2P25", "group__htu21d__base__driver.html#ggae298be07e1cbe586e8ff27ee812a6f84af7d594c5f2d11771de2b324034cc9b14", null ],
-      [ "HUT21D_STATUS_LESS_2P25", "group__htu21d__base__driver.html#ggae298be07e1cbe586e8ff27ee812a6f84aa051693bf6def6c73b517b098b00760d", null ]
+      [ "HTU21D_STATUS_LESS_2P25", "group__htu21d__base__driver.html#ggae298be07e1cbe586e8ff27ee812a6f84a2391d5d5672ee8fc9f793478f09ad131", null ]
     ] ],
     [ "htu21d_deinit", "group__htu21d__base__driver.html#gaf7ebe0f270b1297b038ecf07e8d67318", null ],
     [ "htu21d_get_battery_status", "group__htu21d__base__driver.html#gadef5fb5b7b5e771038ed2947102dea6b", null ],

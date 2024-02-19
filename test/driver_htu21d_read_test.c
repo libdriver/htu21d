@@ -100,7 +100,7 @@ uint8_t htu21d_read_test(htu21d_bool_t hold_master_enable, uint32_t times)
     }
     
     /* enable heater */
-    res = htu21d_set_heater(&gs_handle, HUT21D_BOOL_TRUE);
+    res = htu21d_set_heater(&gs_handle, HTU21D_BOOL_TRUE);
     if (res != 0)
     {
         htu21d_interface_debug_print("htu21d: set heater failed.\n");
@@ -120,7 +120,7 @@ uint8_t htu21d_read_test(htu21d_bool_t hold_master_enable, uint32_t times)
     }
     
     /* if hold master enable */
-    if (hold_master_enable == HUT21D_BOOL_TRUE)
+    if (hold_master_enable == HTU21D_BOOL_TRUE)
     {
         /* set hold master mode */
         res = htu21d_set_mode(&gs_handle, HTU21D_MODE_HOLD_MASTER);
@@ -164,7 +164,7 @@ uint8_t htu21d_read_test(htu21d_bool_t hold_master_enable, uint32_t times)
     }
     
     /* set no hold master mode */
-    res = htu21d_set_mode(&gs_handle, HUT21D_MODE_NO_HOLD_MASTER);
+    res = htu21d_set_mode(&gs_handle, HTU21D_MODE_NO_HOLD_MASTER);
     if (res != 0)
     {
         htu21d_interface_debug_print("htu21d: set mode failed.\n");
