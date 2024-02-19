@@ -62,7 +62,7 @@ extern "C"{
 typedef enum
 {
     HTU21D_BOOL_FALSE = 0x00,        /**< false */
-    HUT21D_BOOL_TRUE  = 0x01,        /**< true */
+    HTU21D_BOOL_TRUE  = 0x01,        /**< true */
 } htu21d_bool_t;
 
 /**
@@ -71,7 +71,7 @@ typedef enum
 typedef enum
 {
     HTU21D_MODE_HOLD_MASTER    = 0x00,        /**< hold master mode */
-    HUT21D_MODE_NO_HOLD_MASTER = 0x01,        /**< no hold master mode */
+    HTU21D_MODE_NO_HOLD_MASTER = 0x01,        /**< no hold master mode */
 } htu21d_mode_t;
 
 /**
@@ -80,7 +80,7 @@ typedef enum
 typedef enum
 {
     HTU21D_STATUS_OVER_2P25 = 0x00,        /**< >2.25V */
-    HUT21D_STATUS_LESS_2P25 = 0x01,        /**< <2.25V */
+    HTU21D_STATUS_LESS_2P25 = 0x01,        /**< <2.25V */
 } htu21d_status_t;
 
 /**

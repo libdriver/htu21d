@@ -129,7 +129,7 @@ uint8_t htu21d_register_test(void)
     htu21d_interface_debug_print("htu21d: check mode pin %s.\n", (HTU21D_MODE_HOLD_MASTER == mode) ? "ok" : "error");
     
     /* no hold master mode */
-    res = htu21d_set_mode(&gs_handle, HUT21D_MODE_NO_HOLD_MASTER);
+    res = htu21d_set_mode(&gs_handle, HTU21D_MODE_NO_HOLD_MASTER);
     if (res != 0)
     {
         htu21d_interface_debug_print("htu21d: set mode failed.\n");
@@ -150,7 +150,7 @@ uint8_t htu21d_register_test(void)
         
         return 1;
     }
-    htu21d_interface_debug_print("htu21d: check mode pin %s.\n", (HUT21D_MODE_NO_HOLD_MASTER == mode) ? "ok" : "error");
+    htu21d_interface_debug_print("htu21d: check mode pin %s.\n", (HTU21D_MODE_NO_HOLD_MASTER == mode) ? "ok" : "error");
     
     /* htu21d_set_resolution/htu21d_get_resolution test */
     htu21d_interface_debug_print("htu21d: htu21d_set_resolution/htu21d_get_resolution test.\n");
@@ -255,7 +255,7 @@ uint8_t htu21d_register_test(void)
     htu21d_interface_debug_print("htu21d: htu21d_set_heater/htu21d_get_heater test.\n");
     
     /* enable heater */
-    res = htu21d_set_heater(&gs_handle, HUT21D_BOOL_TRUE);
+    res = htu21d_set_heater(&gs_handle, HTU21D_BOOL_TRUE);
     if (res != 0)
     {
         htu21d_interface_debug_print("htu21d: set heater failed.\n");
@@ -276,7 +276,7 @@ uint8_t htu21d_register_test(void)
         
         return 1;
     }
-    htu21d_interface_debug_print("htu21d: check heater %s.\n", (HUT21D_BOOL_TRUE == enable) ? "ok" : "error");
+    htu21d_interface_debug_print("htu21d: check heater %s.\n", (HTU21D_BOOL_TRUE == enable) ? "ok" : "error");
     
     /* disable heater */
     res = htu21d_set_heater(&gs_handle, HTU21D_BOOL_FALSE);
@@ -330,7 +330,7 @@ uint8_t htu21d_register_test(void)
     htu21d_interface_debug_print("htu21d: check otp reload %s.\n", (HTU21D_BOOL_FALSE == enable) ? "ok" : "error");
     
     /* disable otp reload */
-    res = htu21d_set_disable_otp_reload(&gs_handle, HUT21D_BOOL_TRUE);
+    res = htu21d_set_disable_otp_reload(&gs_handle, HTU21D_BOOL_TRUE);
     if (res != 0)
     {
         htu21d_interface_debug_print("htu21d: set disable otp reload failed.\n");
@@ -351,7 +351,7 @@ uint8_t htu21d_register_test(void)
         
         return 1;
     }
-    htu21d_interface_debug_print("htu21d: check otp reload %s.\n", (HUT21D_BOOL_TRUE == enable) ? "ok" : "error");
+    htu21d_interface_debug_print("htu21d: check otp reload %s.\n", (HTU21D_BOOL_TRUE == enable) ? "ok" : "error");
     
     /* htu21d_get_serial_number test */
     htu21d_interface_debug_print("htu21d: htu21d_get_serial_number test.\n");

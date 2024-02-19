@@ -735,7 +735,7 @@ uint8_t htu21d_set_resolution(htu21d_handle_t *handle, htu21d_resolution_t resol
         return 3;                                                                      /* return error */
     }
     
-    res = a_htu21d_read(handle, HUT21D_MODE_NO_HOLD_MASTER,
+    res = a_htu21d_read(handle, HTU21D_MODE_NO_HOLD_MASTER,
                         HTU21D_COMMAND_READ_USER_REGISTER, &prev, 1);                  /* read config */
     if (res != 0)                                                                      /* check the result */
     {
@@ -783,7 +783,7 @@ uint8_t htu21d_get_resolution(htu21d_handle_t *handle, htu21d_resolution_t *reso
         return 3;                                                                      /* return error */
     }
     
-    res = a_htu21d_read(handle, HUT21D_MODE_NO_HOLD_MASTER,
+    res = a_htu21d_read(handle, HTU21D_MODE_NO_HOLD_MASTER,
                         HTU21D_COMMAND_READ_USER_REGISTER, &prev, 1);                  /* read config */
     if (res != 0)                                                                      /* check the result */
     {
@@ -823,7 +823,7 @@ uint8_t htu21d_get_battery_status(htu21d_handle_t *handle, htu21d_status_t *stat
         return 3;                                                            /* return error */
     }
     
-    res = a_htu21d_read(handle, HUT21D_MODE_NO_HOLD_MASTER,
+    res = a_htu21d_read(handle, HTU21D_MODE_NO_HOLD_MASTER,
                         HTU21D_COMMAND_READ_USER_REGISTER, &prev, 1);        /* read config */
     if (res != 0)                                                            /* check the result */
     {
@@ -861,7 +861,7 @@ uint8_t htu21d_set_heater(htu21d_handle_t *handle, htu21d_bool_t enable)
         return 3;                                                                      /* return error */
     }
     
-    res = a_htu21d_read(handle, HUT21D_MODE_NO_HOLD_MASTER,
+    res = a_htu21d_read(handle, HTU21D_MODE_NO_HOLD_MASTER,
                         HTU21D_COMMAND_READ_USER_REGISTER, &prev, 1);                  /* read config */
     if (res != 0)                                                                      /* check the result */
     {
@@ -907,7 +907,7 @@ uint8_t htu21d_get_heater(htu21d_handle_t *handle, htu21d_bool_t *enable)
         return 3;                                                            /* return error */
     }
     
-    res = a_htu21d_read(handle, HUT21D_MODE_NO_HOLD_MASTER,
+    res = a_htu21d_read(handle, HTU21D_MODE_NO_HOLD_MASTER,
                         HTU21D_COMMAND_READ_USER_REGISTER, &prev, 1);        /* read config */
     if (res != 0)                                                            /* check the result */
     {
@@ -945,7 +945,7 @@ uint8_t htu21d_set_disable_otp_reload(htu21d_handle_t *handle, htu21d_bool_t ena
         return 3;                                                                      /* return error */
     }
     
-    res = a_htu21d_read(handle, HUT21D_MODE_NO_HOLD_MASTER,
+    res = a_htu21d_read(handle, HTU21D_MODE_NO_HOLD_MASTER,
                         HTU21D_COMMAND_READ_USER_REGISTER, &prev, 1);                  /* read config */
     if (res != 0)                                                                      /* check the result */
     {
@@ -991,7 +991,7 @@ uint8_t htu21d_get_disable_otp_reload(htu21d_handle_t *handle, htu21d_bool_t *en
         return 3;                                                            /* return error */
     }
     
-    res = a_htu21d_read(handle, HUT21D_MODE_NO_HOLD_MASTER,
+    res = a_htu21d_read(handle, HTU21D_MODE_NO_HOLD_MASTER,
                         HTU21D_COMMAND_READ_USER_REGISTER, &prev, 1);        /* read config */
     if (res != 0)                                                            /* check the result */
     {
@@ -1181,7 +1181,7 @@ uint8_t htu21d_init(htu21d_handle_t *handle)
         return 4;                                                                    /* return error */
     }
     handle->delay_ms(15);                                                            /* delay 15 ms */
-    res = a_htu21d_read(handle, HUT21D_MODE_NO_HOLD_MASTER,
+    res = a_htu21d_read(handle, HTU21D_MODE_NO_HOLD_MASTER,
                         HTU21D_COMMAND_READ_USER_REGISTER, &prev, 1);                /* read config */
     if (res != 0)                                                                    /* check the result */
     {
@@ -1192,7 +1192,7 @@ uint8_t htu21d_init(htu21d_handle_t *handle)
     }
     handle->resolution = (htu21d_resolution_t)((((prev >> 7) & 0x01) << 1) 
                                               | (((prev >> 0) & 0x01) << 0));        /* save the resolution */
-    handle->mode = HUT21D_MODE_NO_HOLD_MASTER;                                       /* set no hold master */
+    handle->mode = HTU21D_MODE_NO_HOLD_MASTER;                                       /* set no hold master */
     
     handle->inited = 1;                                                              /* flag finish initialization */
     
