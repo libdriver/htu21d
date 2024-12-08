@@ -115,8 +115,8 @@ uint8_t htu21d_basic_init(void)
 
 /**
  * @brief      basic example read
- * @param[out] *temperature points to a converted temperature buffer
- * @param[out] *humidity points to a converted humidity buffer
+ * @param[out] *temperature pointer to a converted temperature buffer
+ * @param[out] *humidity pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -161,7 +161,7 @@ uint8_t htu21d_basic_deinit(void)
 
 /**
  * @brief      basic example get the serial number
- * @param[out] *number points to a number buffer
+ * @param[out] *number pointer to a number buffer
  * @return     status code
  *             - 0 success
  *             - 1 get serial number failed

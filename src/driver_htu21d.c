@@ -66,9 +66,9 @@
 
 /**
  * @brief     write command
- * @param[in] *handle points to an htu21d handle structure
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an htu21d handle structure
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -88,9 +88,9 @@ static uint8_t a_htu21d_write_cmd(htu21d_handle_t *handle, uint8_t *buf, uint16_
 
 /**
  * @brief      read command
- * @param[in]  *handle points to an htu21d handle structure
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -110,10 +110,10 @@ static uint8_t a_htu21d_read_cmd(htu21d_handle_t *handle, uint8_t *buf, uint16_t
 
 /**
  * @brief     write bytes
- * @param[in] *handle points to an htu21d handle structure
- * @param[in] reg is the iic register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an htu21d handle structure
+ * @param[in] reg iic register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -133,11 +133,11 @@ static uint8_t a_htu21d_write(htu21d_handle_t *handle, uint8_t reg, uint8_t *buf
 
 /**
  * @brief      read bytes
- * @param[in]  *handle points to an htu21d handle structure
- * @param[in]  mode is the read mode
- * @param[in]  reg is the iic register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[in]  mode read mode
+ * @param[in]  reg iic register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -171,8 +171,8 @@ static uint8_t a_htu21d_read(htu21d_handle_t *handle, uint8_t mode, uint8_t reg,
 
 /**
  * @brief     check the crc
- * @param[in] value is the input value
- * @param[in] crc is the checked crc
+ * @param[in] value input value
+ * @param[in] crc checked crc
  * @return    status code
  *            - 0 pass
  *            - 1 error
@@ -207,8 +207,8 @@ static uint8_t a_htu21d_crc(uint16_t value, uint32_t crc)
 
 /**
  * @brief     set the chip mode
- * @param[in] *handle points to an htu21d handle structure
- * @param[in] mode is the chip mode
+ * @param[in] *handle pointer to an htu21d handle structure
+ * @param[in] mode chip mode
  * @return    status code
  *            - 0 success
  *            - 1 set mode failed
@@ -234,8 +234,8 @@ uint8_t htu21d_set_mode(htu21d_handle_t *handle, htu21d_mode_t mode)
 
 /**
  * @brief      get the chip mode
- * @param[in]  *handle points to an htu21d handle structure
- * @param[out] *mode points to a chip mode buffer
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[out] *mode pointer to a chip mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get mode failed
@@ -261,7 +261,7 @@ uint8_t htu21d_get_mode(htu21d_handle_t *handle, htu21d_mode_t *mode)
 
 /**
  * @brief     soft reset
- * @param[in] *handle points to an htu21d handle structure
+ * @param[in] *handle pointer to an htu21d handle structure
  * @return    status code
  *            - 0 success
  *            - 1 soft reset failed
@@ -296,11 +296,11 @@ uint8_t htu21d_soft_reset(htu21d_handle_t *handle)
 
 /**
  * @brief      read the temperature and humidity data
- * @param[in]  *handle points to an htu21d handle structure
- * @param[out] *temperature_raw points to a raw temperature buffer
- * @param[out] *temperature_s points to a converted temperature buffer
- * @param[out] *humidity_raw points to a raw humidity buffer
- * @param[out] *humidity_s points to a converted humidity buffer
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[out] *temperature_raw pointer to a raw temperature buffer
+ * @param[out] *temperature_s pointer to a converted temperature buffer
+ * @param[out] *humidity_raw pointer to a raw humidity buffer
+ * @param[out] *humidity_s pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read temperature humidity failed
@@ -486,9 +486,9 @@ uint8_t htu21d_read_temperature_humidity(htu21d_handle_t *handle,
 
 /**
  * @brief      read the temperature data
- * @param[in]  *handle points to an htu21d handle structure
- * @param[out] *temperature_raw points to a raw temperature buffer
- * @param[out] *temperature_s points to a converted temperature buffer
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[out] *temperature_raw pointer to a raw temperature buffer
+ * @param[out] *temperature_s pointer to a converted temperature buffer
  * @return     status code
  *             - 0 success
  *             - 1 read temperature failed
@@ -599,9 +599,9 @@ uint8_t htu21d_read_temperature(htu21d_handle_t *handle, uint16_t *temperature_r
 
 /**
  * @brief      read the humidity data
- * @param[in]  *handle points to an htu21d handle structure
- * @param[out] *humidity_raw points to a raw humidity buffer
- * @param[out] *humidity_s points to a converted humidity buffer
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[out] *humidity_raw pointer to a raw humidity buffer
+ * @param[out] *humidity_s pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read humidity failed
@@ -712,8 +712,8 @@ uint8_t htu21d_read_humidity(htu21d_handle_t *handle, uint16_t *humidity_raw, fl
 
 /**
  * @brief     set the resolution
- * @param[in] *handle points to an htu21d handle structure
- * @param[in] resolution is the set resolution
+ * @param[in] *handle pointer to an htu21d handle structure
+ * @param[in] resolution chip resolution
  * @return    status code
  *            - 0 success
  *            - 1 set resolution failed
@@ -760,8 +760,8 @@ uint8_t htu21d_set_resolution(htu21d_handle_t *handle, htu21d_resolution_t resol
 
 /**
  * @brief      get the resolution
- * @param[in]  *handle points to an htu21d handle structure
- * @param[out] *resolution points to a resolution buffer
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[out] *resolution pointer to a resolution buffer
  * @return     status code
  *             - 0 success
  *             - 1 get resolution failed
@@ -800,8 +800,8 @@ uint8_t htu21d_get_resolution(htu21d_handle_t *handle, htu21d_resolution_t *reso
 
 /**
  * @brief      get the battery status
- * @param[in]  *handle points to an htu21d handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get battery status failed
@@ -838,8 +838,8 @@ uint8_t htu21d_get_battery_status(htu21d_handle_t *handle, htu21d_status_t *stat
 
 /**
  * @brief     enable or disable the heater
- * @param[in] *handle points to an htu21d handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an htu21d handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set heater failed
@@ -884,8 +884,8 @@ uint8_t htu21d_set_heater(htu21d_handle_t *handle, htu21d_bool_t enable)
 
 /**
  * @brief      get the heater status
- * @param[in]  *handle points to an htu21d handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get heater failed
@@ -922,8 +922,8 @@ uint8_t htu21d_get_heater(htu21d_handle_t *handle, htu21d_bool_t *enable)
 
 /**
  * @brief     enable or disable otp reload
- * @param[in] *handle points to an htu21d handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an htu21d handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set disable otp reload failed
@@ -968,8 +968,8 @@ uint8_t htu21d_set_disable_otp_reload(htu21d_handle_t *handle, htu21d_bool_t ena
 
 /**
  * @brief      get the disable otp reload status
- * @param[in]  *handle points to an htu21d handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get disable otp reload failed
@@ -1006,8 +1006,8 @@ uint8_t htu21d_get_disable_otp_reload(htu21d_handle_t *handle, htu21d_bool_t *en
 
 /**
  * @brief      get the serial number
- * @param[in]  *handle points to an htu21d handle structure
- * @param[out] *number points to a number buffer
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[out] *number pointer to a number buffer
  * @return     status code
  *             - 0 success
  *             - 1 get serial number failed
@@ -1094,7 +1094,7 @@ uint8_t htu21d_get_serial_number(htu21d_handle_t *handle, uint64_t *number)
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an htu21d handle structure
+ * @param[in] *handle pointer to an htu21d handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic initialization failed
@@ -1201,7 +1201,7 @@ uint8_t htu21d_init(htu21d_handle_t *handle)
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an htu21d handle structure
+ * @param[in] *handle pointer to an htu21d handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic deinit failed
@@ -1244,9 +1244,9 @@ uint8_t htu21d_deinit(htu21d_handle_t *handle)
 
 /**
  * @brief     set the chip register
- * @param[in] *handle points to an htu21d handle structure
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an htu21d handle structure
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -1270,9 +1270,9 @@ uint8_t htu21d_set_reg(htu21d_handle_t *handle, uint8_t *buf, uint16_t len)
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to an htu21d handle structure
- * @param[out] *buf points to data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an htu21d handle structure
+ * @param[out] *buf pointer to data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -1296,7 +1296,7 @@ uint8_t htu21d_get_reg(htu21d_handle_t *handle, uint8_t *buf, uint16_t len)
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an htu21d info structure
+ * @param[out] *info pointer to an htu21d info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
