@@ -50,8 +50,8 @@ extern "C"{
 
 /**
  * @brief     read test
- * @param[in] hold_master_enable is a bool value
- * @param[in] times is test times
+ * @param[in] hold_master_enable bool value
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 test failed
