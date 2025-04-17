@@ -10,7 +10,7 @@
 
 The HTU21D(F) is a new digital humidity sensor with temperature output by MEAS. Setting new standards in terms of size and intelligence, it is embedded in a reflow solderable Dual Flat No leads (DFN) package with a small 3 x 3 x 0.9 mm footprint. This sensor provides calibrated, linearized signals in digital, I²C format. HTU21D(F) digital humidity sensors are dedicated humidity and temperature plug and play transducers for OEM applications where reliable and accurate measurements are needed. Direct interface with a micro-controller is made possible with the module for humidity and temperature digital outputs. These low power sensors are designed for high volume and cost sensitive applications with tight space constraints.Every sensor is individually calibrated and tested. Lot identification is printed on the sensor and an electronic identification code is stored on the chip – which can be read out by command. Low battery can be detected and a checksum improves communication reliability. The resolution of these digital humidity sensors can be changed by command (8/12bit up to 12/14bit for RH/T).It is used in Home appliance, medical, printers, humidifier and so on .
 
-LibDriver HTU21D is the full function driver of HTU21D launched by LibDriver.It provides the function of reading temperature and relative humidity. LibDriver is MISRA compliant.
+LibDriver HTU21D is a full-featured driver of HTU21D launched by LibDriver.It provides the function of reading temperature and relative humidity. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
