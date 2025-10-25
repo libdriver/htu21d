@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['temperature_5fmax_118',['temperature_max',['../structhtu21d__info__s.html#a3366a5dce9b829e03c3d321c2b4df3f6',1,'htu21d_info_s']]],
-  ['temperature_5fmax_119',['TEMPERATURE_MAX',['../driver__htu21d_8c.html#a90c0b20d54005712fcc8cb01281360e9',1,'driver_htu21d.c']]],
-  ['temperature_5fmin_120',['temperature_min',['../structhtu21d__info__s.html#a8f9dbe66ac0b66ebae0a36fcb4ba368e',1,'htu21d_info_s']]],
-  ['temperature_5fmin_121',['TEMPERATURE_MIN',['../driver__htu21d_8c.html#aab353db5bf4eb787f86a2080f609a551',1,'driver_htu21d.c']]]
+  ['mainpage_2eh_0',['mainpage.h',['../mainpage_8h.html',1,'']]],
+  ['manufacturer_5fname_1',['MANUFACTURER_NAME',['../driver__htu21d_8c.html#aaa2b8f5b105c3019df0cb346f472e803',1,'driver_htu21d.c']]],
+  ['manufacturer_5fname_2',['manufacturer_name',['../structhtu21d__info__s.html#ad25285dbf810c90f8eaf3fcef6f2b2ea',1,'htu21d_info_s']]],
+  ['max_5fcurrent_3',['MAX_CURRENT',['../driver__htu21d_8c.html#a2989837a37d6d63b59c6dd541b785435',1,'driver_htu21d.c']]],
+  ['max_5fcurrent_5fma_4',['max_current_ma',['../structhtu21d__info__s.html#a9db82802561bf22d799b03a345f1d1dc',1,'htu21d_info_s']]],
+  ['mode_5',['mode',['../structhtu21d__handle__s.html#a37e90f5e3bd99fac2021fb3a326607d4',1,'htu21d_handle_s']]]
 ];
