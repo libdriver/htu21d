@@ -353,7 +353,7 @@ uint8_t htu21d_read_temperature_humidity(htu21d_handle_t *handle,
             
             return 5;                                                                     /* return error */
         }
-        *temperature_raw = data;                                                          /* copy data */
+        *temperature_raw = data & 0xFFFCU;                                                /* copy data */
         
         res = a_htu21d_read(handle, HTU21D_MODE_HOLD_MASTER, 
                             HTU21D_COMMAND_TRIG_HUMI_HOLD_MASTER, buf, 3);                /* read humidity */
@@ -377,7 +377,7 @@ uint8_t htu21d_read_temperature_humidity(htu21d_handle_t *handle,
             
             return 5;                                                                     /* return error */
         }
-        *humidity_raw = data;                                                             /* copy data */
+        *humidity_raw = data & 0xFFFCU;                                                   /* copy data */
     }
     else                                                                                  /* no hold master mode */
     {
@@ -393,7 +393,7 @@ uint8_t htu21d_read_temperature_humidity(htu21d_handle_t *handle,
         }
         if (handle->resolution == HTU21D_RESOLUTION_TEMP_11_BITS_RH_11_BITS)              /* temp 11 bits and rh 11 bits */
         {
-            handle->delay_ms(7);                                                          /* delay 7 ms */
+            handle->delay_ms(8);                                                          /* delay 8 ms */
         }
         else if (handle->resolution == HTU21D_RESOLUTION_TEMP_12_BITS_RH_8_BITS)          /* temp 12 bits and rh 8 bits */
         {
@@ -428,7 +428,7 @@ uint8_t htu21d_read_temperature_humidity(htu21d_handle_t *handle,
             
             return 5;                                                                     /* return error */
         }
-        *temperature_raw = data;                                                          /* copy data */
+        *temperature_raw = data & 0xFFFCU;                                                /* copy data */
         
         cmd = HTU21D_COMMAND_TRIG_HUMI_NO_HOLD_MASTER;                                    /* read humidity */
         res = a_htu21d_write_cmd(handle, &cmd, 1);                                        /* write the command */
@@ -440,7 +440,7 @@ uint8_t htu21d_read_temperature_humidity(htu21d_handle_t *handle,
         }
         if (handle->resolution == HTU21D_RESOLUTION_TEMP_11_BITS_RH_11_BITS)              /* temp 11 bits and rh 11 bits */
         {
-            handle->delay_ms(7);                                                          /* delay 7 ms */
+            handle->delay_ms(8);                                                          /* delay 8 ms */
         }
         else if (handle->resolution == HTU21D_RESOLUTION_TEMP_12_BITS_RH_8_BITS)          /* temp 12 bits and rh 8 bits */
         {
@@ -475,7 +475,7 @@ uint8_t htu21d_read_temperature_humidity(htu21d_handle_t *handle,
             
             return 5;                                                                     /* return error */
         }
-        *humidity_raw = data;                                                             /* copy data */
+        *humidity_raw = data & 0xFFFCU;                                                   /* copy data */
     }
 
     *temperature_s = (float)(*temperature_raw) / 65536.0f * 175.72f - 46.85f;             /* convert raw temperature */
@@ -538,7 +538,7 @@ uint8_t htu21d_read_temperature(htu21d_handle_t *handle, uint16_t *temperature_r
             
             return 5;                                                                     /* return error */
         }
-        *temperature_raw = data;                                                          /* copy data */
+        *temperature_raw = data & 0xFFFCU;                                                /* copy data */
     }
     else                                                                                  /* no hold master mode */
     {
@@ -554,7 +554,7 @@ uint8_t htu21d_read_temperature(htu21d_handle_t *handle, uint16_t *temperature_r
         }
         if (handle->resolution == HTU21D_RESOLUTION_TEMP_11_BITS_RH_11_BITS)              /* temp 11 bits and rh 11 bits */
         {
-            handle->delay_ms(7);                                                          /* delay 7 ms */
+            handle->delay_ms(8);                                                          /* delay 8 ms */
         }
         else if (handle->resolution == HTU21D_RESOLUTION_TEMP_12_BITS_RH_8_BITS)          /* temp 12 bits and rh 8 bits */
         {
@@ -589,7 +589,7 @@ uint8_t htu21d_read_temperature(htu21d_handle_t *handle, uint16_t *temperature_r
             
             return 5;                                                                     /* return error */
         }
-        *temperature_raw = data;                                                          /* copy data */
+        *temperature_raw = data & 0xFFFCU;                                                /* copy data */
     }
 
     *temperature_s = (float)(*temperature_raw) / 65536.0f * 175.72f - 46.85f;             /* convert raw temperature */
@@ -651,7 +651,7 @@ uint8_t htu21d_read_humidity(htu21d_handle_t *handle, uint16_t *humidity_raw, fl
             
             return 5;                                                                     /* return error */
         }
-        *humidity_raw = data;                                                             /* copy data */
+        *humidity_raw = data & 0xFFFCU;                                                   /* copy data */
     }
     else                                                                                  /* no hold master mode */
     {
@@ -667,7 +667,7 @@ uint8_t htu21d_read_humidity(htu21d_handle_t *handle, uint16_t *humidity_raw, fl
         }
         if (handle->resolution == HTU21D_RESOLUTION_TEMP_11_BITS_RH_11_BITS)              /* temp 11 bits and rh 11 bits */
         {
-            handle->delay_ms(7);                                                          /* delay 7 ms */
+            handle->delay_ms(8);                                                          /* delay 8 ms */
         }
         else if (handle->resolution == HTU21D_RESOLUTION_TEMP_12_BITS_RH_8_BITS)          /* temp 12 bits and rh 8 bits */
         {
@@ -702,7 +702,7 @@ uint8_t htu21d_read_humidity(htu21d_handle_t *handle, uint16_t *humidity_raw, fl
             
             return 5;                                                                     /* return error */
         }
-        *humidity_raw = data;                                                             /* copy data */
+        *humidity_raw = data & 0xFFFCU;                                                   /* copy data */
     }
 
     *humidity_s = (float)(*humidity_raw) / 65536.0f * 125.0f - 6.0f;                      /* convert raw humidity */
