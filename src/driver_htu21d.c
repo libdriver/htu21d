@@ -754,6 +754,7 @@ uint8_t htu21d_set_resolution(htu21d_handle_t *handle, htu21d_resolution_t resol
         
         return 1;                                                                      /* return error */
     }
+    handle->resolution = resolution;                                                   /* set resolution */
     
     return 0;                                                                          /* success return 0 */
 }
